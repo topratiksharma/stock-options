@@ -1,0 +1,10 @@
+<div class="card-list">
+  <div *ngFor="let stock of formattedStockDetails">
+    <sca-stock-card [stockDetails]="stock" (enabled)="stockListupdate($event)">
+    </sca-stock-card>
+  </div>
+</div>
+
+<ul>
+  <li>open web socket for continous calls</li>
+</ul>

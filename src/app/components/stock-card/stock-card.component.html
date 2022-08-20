@@ -1,0 +1,28 @@
+<div class="card" [ngStyle]="{ 'background-color': status }">
+  <div class="header">{{ stockDetails.symbol }}</div>
+  <div class="sub-header">{{ stockDetails.currentPrice }}</div>
+  <div class="change">
+    <div class="price">
+      {{
+        stockDetails.trade > 0
+          ? '+'+stockDetails.trade.toFixed(2)
+          : stockDetails.trade.toFixed(2)
+      }}
+    </div>
+    <div class="percent">({{ stockDetails.percent }}%)</div>
+  </div>
+  <div class="trade">
+    <div class="title">Last Trade</div>
+    <div class="sub-title">
+      {{ stockDetails.lastTradeTime | date: "hh:mm:ss:a" }}
+    </div>
+  </div>
+  <div class="volume">VOL : {{ stockDetails.volume }}</div>
+  <div class="action">
+    <mat-slide-toggle
+      (change)="statusChange()"
+      [(ngModel)]="stockOption"
+    ></mat-slide-toggle>
+  </div>
+</div>
+<!-- [ngStyle]="{style: expression}" -->

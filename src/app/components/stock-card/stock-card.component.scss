@@ -1,0 +1,136 @@
+.card {
+  background-color: #ccc;
+  width: 192px;
+  height: 366px;
+  border-radius: 10px;
+  color: #34495e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 1.2rem;
+}
+
+.sub-header {
+  padding: .5rem;
+  font-size: 1.6rem;
+}
+
+.change {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  justify-content: center;
+  padding-top: .5rem;
+
+  // .price {
+  // }
+
+  // .percent {
+  //   // font-size: 1.2rem;
+  // }
+}
+
+.trade {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  justify-content: center;
+  padding-bottom: 1.4rem;
+  padding-top: 1.4rem;
+
+  .title {
+    font-weight: bold;
+  }
+
+  // .sub-title {
+  // }
+}
+
+.volume {
+  font-size: 1.6rem;
+}
+
+.action {
+  padding-top: 1.5rem;
+}
+
+.profit {
+  background-color: #2ecc71;
+}
+
+.off {
+  background-color: #ecf0f1;
+}
+
+.loss {
+  background-color: #e74c3c;
+}
+
+:host {
+  ::ng-deep {
+
+    .mat-slide-toggle-bar {
+      background-color: rgb(189 195 199);
+      border-radius: 19px;
+      height: 38px;
+      width: 112px;
+
+      &::before {
+        color: #ffffff;
+        content: "OFF";
+        font-size: 1.2rem;
+        font-weight: bold;
+        left: 45px;
+        position: absolute;
+        top: 7px;
+      }
+    }
+
+    .mat-slide-toggle-thumb {
+      background-color: #7f8c9a;
+      height: 28px;
+      width: 28px;
+    }
+
+    .mat-slide-toggle-thumb-container {
+      height: 20px;
+      left: 4px;
+      top: 4.5px;
+      width: 20px;
+    }
+
+    .mat-slide-toggle .mat-slide-toggle-ripple {
+      left: calc(50% - 16px);
+      top: calc(50% - 15.5px);
+    }
+
+    .mat-slide-toggle.mat-checked {
+      .mat-slide-toggle-thumb-container {
+        transform: translate3d(72px, 0, 0);
+      }
+
+      .mat-slide-toggle-thumb {
+        background-color: #1abc9c;
+      }
+
+      .mat-slide-toggle-bar {
+        background-color: #34495e;
+
+        &::before {
+          content: "ON";
+          color: #1abc9c;
+          left: 34px;
+        }
+      }
+    }
+  }
+}
