@@ -45,7 +45,6 @@ export class StockWsService {
     return this.stockSubscription;
   }
 
-
   private stockSubscriptionCall() {
     const stockSubscriptions: ObservableInput<any>[] = [];
     this.stockList.forEach((stock) => {
